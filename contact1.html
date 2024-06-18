@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="chatbot/chatbot.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="chatbot/chatbot.js" ></script>
+<script type="text/javascript" src="chatbot/constants.js" ></script> 
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {  
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+    });
+  }
+  </script>
+
+    <style>
+        .marquee {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .marquee span {
+            animation: marquee 15s linear infinite;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-bar {
+            margin-right: 20px;
+        }
+
+        .fooddan-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-bar ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .nav-bar ul li {
+            margin-right: 20px;
+        }
+
+        .card {
+            border: 1px solid black;
+            /* Add border */
+            border-radius: 5px;
+            /* Add border radius for rounded corners */
+            overflow-y: auto;
+            /* Add overflow-y to enable vertical scrolling */
+            max-height: 200px;
+            /* Set maximum height for scrolling */
+            padding: 20px;
+            /* Increase padding */
+            margin-bottom: 20px;
+            /* Add margin bottom for spacing */
+            background-color: rgb(186, 235, 158);
+        }
+
+        .card-header {
+            /* Light green */
+            color: #155724;
+            /* Dark green */
+            border-color: #c3e6cb;
+            /* Medium green */
+        }
+    </style>
+</head>
+
+<body style="background-color: antiquewhite;">
+    <header style="font-size: 45px; background-color: cadetblue;"><b>Food<b style="color: green;">Dan</b></b></div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="profile.php">Profile</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <div class="marquee">
+        <span>Don't waste food, share it with those in need!</span>
+    </div>
+    <img src="https://media.istockphoto.com/photos/hand-pressing-a-contact-us-button-picture-id487923098?k=6&m=487923098&s=612x612&w=0&h=fzAGlVKaTlnYJuZpRCD9ScQcyOzonwtwvOGMmvZBO1U="
+        style="width: 100%; max-height: 200px; display: block; margin: 0 auto;" alt="">
+
+    <p class="heading" style=" margin: 20px;">contact us </p>
+
+    <!-- <h1 class="heading">Contact Us</h1>  -->
+    <div class="contact-form">
+        <form action="feedback.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <br>
+            <input type="submit" value="Send" name="send" href="#">
+        </form>
+    </div>
+    <div class="contact-info" style="padding: 10px;">
+        <p>Email: fooddonate@gmail.com</p>
+        <p>Phone: 6284717464</p>
+        <p>Address: NMAMIT NITTE</p>
+    </div>
+    
+ <div id="container" class="container">
+    
+
+  <div id="chat" class="chat">
+    <div id="messages" class="messages"></div>
+    <input id="input" type="text" placeholder="Say something..." autocomplete="off" />
+  </div>
+     
+</div>
+
+   
+        <div class="help" style="background-color:rgb(186, 235, 158);">
+            <p style="font-size: 23px; text-align: center; padding:10px;">Help & FAQs?</p>
+
+            <button class="accordion">how to donate food ?</button>
+            <div class="panel">
+                <p>1)click on <a href="terms.html">donate</a> in home page </p>
+                <p>2)fill the details </p>
+                <p>3)click on submit</p>
+
+            </div>
+
+            <button class="accordion">How will my donation be used?</button>
+            <div class="panel">
+                <p style="padding: 10px;"> Your donation will be used to support our mission and the various
+                    programs and initiatives that we have in place. Your donation will help us to continue
+                    providing assistance and support to those in need. You can find more information about our
+                    programs and initiatives on our website. If you have any specific questions or concerns,
+                    please feel free to contact us</p>
+            </div>
+
+            <button class="accordion">What should I do if my food donation is near or past its expiration date?</button>
+            <div class="panel">
+                <p style="padding: 10px;">We appreciate your willingness to donate, but to ensure the safety of
+                    our clients we can't accept food that is near or past its expiration date. We recommend
+                    checking expiration dates before making a donation or contact us for further guidance</p>
+
+            </div>
+            <button class="accordion">How do I request food assistance?</button>
+            <div class="panel">
+                <p>1) Visit our admin.</p>
+                <p>2) We will look into quantity and location.</p>
+                <p>3) Volunteer will pick up food abd deliever to you</p>
+
+            </div>
+
+            <button class="accordion">Are there specific items you don't accept as food donations?</button>
+            <div class="panel">
+                <p>Yes, We do not accept opened or expired food items.</p>
+            </div>
+
+            <button class="accordion">Can I organize a food drive to collect donations for your organization?</button>
+            <div class="panel">
+                <p>Absolutely! Organizing a food drive is a fantastic way to support our cause. Please
+                    contact us to discuss your ideas and coordinate the details.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p class="about">
+                    <span>About us</span> The basic concept of this project Food Waste Management is to
+                    collect the excess/leftover food from donors such as hotels, restaurants, marriage halls,
+                    etc. and distribute it to the needy people.
+                </p>
+            </div>
+            <div class="footer-center">
+                <div>
+                    <p><span>Contact</span></p>
+                </div>
+                <div>
+                    <p>+91 6284717464</p>
+                </div>
+                <div>
+                    <p><a href="#">FoodDan@gmail.com</a></p>
+                </div>
+                <div class="sociallist">
+                    <ul class="social">
+                        <li><a href="https://www.facebook.com/TheAkshayaPatraFoundation/"><img src="https://i.ibb.co/x7P24fL/facebook.png"
+                                    style="width: 13px; height: auto;"></a></li>
+                        <li><a href="https://twitter.com/globalgiving"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"
+                                    style="width: 22px; height: auto;"></a></li>
+                        <li><a href="https://www.instagram.com/charitism/"><img src="https://i.ibb.co/ySwtH4B/instagram.png"
+                                    style="width: 20px; height: auto;"></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-right">
+                <h2>Food<b style="color: green;">Dan</b></h2>
+                <p class="menu">
+                    <a href="#">Home</a> |
+                    <a href="about.html">About</a> |
+                    <a href="profile.php">Profile</a> |
+                    <a href="contact.html">Contact</a>
+                </p>
+                <p class="name">FoodDan &copy; 2023</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Function to add a user message to the chat
+        function addUserMessage(message) {
+            $('#messages').append('<div class="message user-message">' + message + '</div>');
+        }
+
+        // Function to add a chatbot message to the chat
+        function addBotMessage(message) {
+            $('#messages').append('<div class="message bot-message">' + message + '</div>');
+        }
+
+        // Function to handle user input and send messages
+        function sendMessage() {
+            var inputMessage = $('#input').val();
+            if (inputMessage.trim() !== '') {
+                addUserMessage(inputMessage); // Add user message to chat
+                // Here you would send the user message to your chatbot backend for processing
+                // For demonstration purposes, I'll simulate a response after a short delay
+                setTimeout(function () {
+                    addBotMessage('This is a dummy response from the chatbot.'); // Add bot response to chat
+                }, 1000);
+                $('#input').val(''); // Clear input field
+            }
+        }
+
+        // Event listener for send button click
+        $('#sendButton').click(function () {
+            sendMessage();
+        });
+
+        // Event listener for pressing Enter key
+        $('#input').keypress(function (e) {
+            if (e.which === 13) {
+                sendMessage();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
